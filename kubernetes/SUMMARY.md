@@ -82,7 +82,7 @@ Ref: Official docs ["What is Kubenetes?"](https://kubernetes.io/docs/concepts/ov
     * `Service Account & Token ctl`: create default accounts and API access tokens for new namespaces.
 
 ### Node Components
-<center><img src=./k8s_pod.png style="max-width: 720px;"></center>
+<center><img src=./imgs/k8s_pod.png style="max-width: 720px;"></center>
 
 * **Kubelet**: an agent runs on each node. It makes sure containers are running in a pod.
 * **Kube-proxy**: 
