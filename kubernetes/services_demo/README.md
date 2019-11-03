@@ -42,20 +42,22 @@
 * Now, external caller can access nginx service by calling `curl http://nginx-clusterip`
 
 ### `NodePort` Service
-    ```yml
-    apiVersion: v1
-    kind: Service
-    metadata:
-    name: nginx-nodeport  # this allows caller to do http://nginx-clusterip
-    spec:
-    type: NodePort
-    selector:
-        app: my-nginx  # select all pods that has my-nginx selector
-    ports:
-    - port: 8080
-        targetPort: 80
-        nodePort: 31000
-    ```
+
+```yml
+apiVersion: v1
+kind: Service
+metadata:
+name: nginx-nodeport  # this allows caller to do http://nginx-clusterip
+spec:
+type: NodePort
+selector:
+    app: my-nginx  # select all pods that has my-nginx selector
+ports:
+- port: 8080
+    targetPort: 80
+    nodePort: 31000
+```
+
 * Service can be accessed `localhost:31000`
 
 ### LoadBalancer
